@@ -1,8 +1,9 @@
 Deathpool::Application.routes.draw do
   
-  get "home/index"
+  get "pages/home"
+
   
-  root :to => "home#index"
+  root :to => "pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
