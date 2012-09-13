@@ -1,8 +1,12 @@
 Deathpool::Application.routes.draw do
   
-  get "pages/home"
+  devise_for :users
 
+  get "pages/home"
+  get "page/profile"
   
+  match '/profile', :to => 'pages#profile'
+  match '/home', :to => 'pages#home'
   root :to => "pages#home"
 
   # The priority is based upon order of creation:
